@@ -1,44 +1,40 @@
 {
-    "name": "jvleeuwen/broadsoft-xsi",
-    "description": "Broadsoft XSI package",
-    "keywords": ["laravel", "framework", "jvleeuwen", "jellevl", "jellevl07", "xsi", "broadsoft", "callmonitor"],
-    "type": "composer-plugin",
+    "name": "Jvleeuwen/BroadsoftXSI",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jelle van Leeuwen",
+            "email": "info@jellevl.nl"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-
+        "pusher/pusher-php-server": "^2.6",
+        "guzzlehttp/guzzle": "^6.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.3"
+        "laravel/laravel": "dev-develop",
+        "phpunit/phpunit": "~5.0",
+        "orchestra/testbench": "^3.5",
+        "satooshi/php-coveralls": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "jvleeuwen\\broadsoft-xsi\\": "src/"
+            "Jvleeuwen\\BroadSoftXSI\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "jvleeuwen\\Tests\\broadsoft-xsi\\": "tests/"
+            "Jvleeuwen\\BroadsoftXSI\\Test\\" : "TestCase.php"
         }
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "jvleeuwen",
-            "email": "info@jellevl.nl"
-        }
-    ],
-    "config": {
-        "preferred-install": "dist"
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "6.0-dev"
-        },
-        "laravel": {
-            "providers": [
-                "GrahamCampbell\\GitHub\\GitHubServiceProvider"
+        "laravel" : {
+            "providers" : [
+                "Jvleeuwen\\BroadsoftXSI\\BroadsoftXSIServiceProvider::class",
+                "App\\Providers\\BroadcastServiceProvider::class"
             ]
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
