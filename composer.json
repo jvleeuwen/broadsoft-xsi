@@ -1,0 +1,44 @@
+{
+    "name": "jvleeuwen/broadsoft-xsi",
+    "description": "Broadsoft XSI package",
+    "keywords": ["laravel", "framework", "jvleeuwen", "jellevl", "jellevl07", "xsi", "broadsoft", "callmonitor"],
+    "type": "composer-plugin",
+    "require": {
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "jvleeuwen\\broadsoft-xsi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "jvleeuwen\\Tests\\broadsoft-xsi\\": "tests/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jvleeuwen",
+            "email": "info@jellevl.nl"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "6.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "GrahamCampbell\\GitHub\\GitHubServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
