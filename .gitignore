@@ -21,3 +21,4 @@ Homestead.json
 
 .idea/
 docs/
+tests/storage/
